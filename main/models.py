@@ -4,7 +4,7 @@ from django.db import models
 import uuid
 from django.db import models
 
-class News(models.Model):
+class ShopProducts(models.Model):
     CATEGORY_CHOICES = [
         ('products', 'Products'),
         ('new', 'New'),
