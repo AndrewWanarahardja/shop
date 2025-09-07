@@ -44,7 +44,7 @@ Class : PBP A
 
 5. Menurut Anda, dari semua framework yang ada, mengapa framework Django dijadikan permulaan pembelajaran pengembangan perangkat lunak?
     Karena django berdasarkan python yang relatif mudah untuk digunakan, mengikuti struktur MVT
-
+    jadi lebih jelas dan terstruktur.
 
 6. Apakah ada feedback untuk asisten dosen tutorial 1 yang telah kamu kerjakan sebelumnya?
     No interaction = no feedback, cuz it was online
