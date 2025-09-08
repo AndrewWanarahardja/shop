@@ -29,13 +29,8 @@ Class : PBP A
 2. Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html.
 
     Bagan :
-    url request --> url.py --> views.py --> template.py --> output
-                                 |  ^  
-                                 v  |
-                               models.py
-                                 |  ^  
-                                 v  |
-                               database
+    url request --> url.py --> views.py --> models.py --> database 
+    --> models.py --> view.py -- > template.py --> output
 
     Penjelasan : 
     ketika seorang user mengetik url, masuk ke urls.py yang memastikan url yang ditulis benar. Jika 
