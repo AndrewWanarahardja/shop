@@ -3,19 +3,28 @@ NPM : 2406407373
 Class : PBP A
 
 1. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
-    Membuat direktori baru, mengaktifkan virtual environment
-    Menambah berkas seperti .env, .env.prod, .gitignore, requirements.txt
-    menginstall requiremnets dari requirements.txt
-    migrate
-    start project django
+    Pembuatan project django baru bisa dilakukan dengan membuat direktori baru, mengaktifkan virtual
+        environment. Lalu menambah berkas seperti .env, .env.prod, .gitignore, requirements.txt. setelah itu perlu menginstall requirements dari requirements.txt. perlu dilakukan migrate untuk langkah awal membuat database. start project django lalu bisa dilakukan dengan perintah    python manage.py startproject .
 
-    python manage.py startapp main
+    pembuatan aplikasi dengan django bisa dilakukan dengan perintah python manage.py startapp main 
+        dengan main sebagai nama aplikasi yang dibuat
 
-    pada views.py membuat model dengan melakukan assignment field tertentu terhadap suatu       
+    untuk melakukan routing ke aplikasi main, pertama aplikasi tersebut harus ditambahkan ke dalam list
+        of applications pada berkas settings.py. lalu pada berkas urls.py tingkat project, ditambah sebuah url pattern dengan fungsi path yang mengarahkan request ke urls.py pada tingkat aplikasi dalam aplikasi main 
+
+    pada models.py membuat model dengan melakukan assignment field tertentu terhadap suatu       
         variable sesuai spesifikasi yang diminta tugas
 
     membuat sebuah fungsi yang mengembalikan nilai nama toko, nama, npm, dan kelas. digunakan untuk 
-        mengubah nilai yang ditampilkan di main.html
+        mengubah nilai yang ditampilkan di main.html. fungsi path mengambil beberapa argumen, termasuk sebuah dictionary. jika salah satu key dari dictionary tersebut berada dalam dua kurung kurawal seperti {{ dictKey }} maka akan tampil value dari key tersebut pada website
+
+    fungsi show_main pada views.py untuk mengembalikan data ke template html dilakukan dengan fungsi 
+        render. untuk melakukan hal tersebut fungsi render mengambil argumen request, file html yang dijadikan template, dan sebuah dictionary yang digunakan untuk menggantikan informasi pada tempat yang tertulis di file html
+    
+    untuk membuat routing pada urls.py pada aplikasi main, digunakan fungsi path. fungsi path digunakan
+        untuk memberi tahu ke mana alurnya bergerak ketika ada url cocok yang masuk. ingin dilakukan routing ke views.py untuk dijalankan fungsi show_main, maka show_main dijadikan argumen kedua pada fungsi path
+
+    deployment ke pws bisa dilakukan dengan membuka pbp.cs.ui.ac.id dan membuat project baru, isi data yang diperlukan, dan menyimpan credentials. Lalu salin isi .env.prod ke dalam raw editor. ikuti langkah url deployment yang tertera pada pws. update allowed_hosts untuk bisa menjalankan server
 
 2. Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html.
 
@@ -47,4 +56,4 @@ Class : PBP A
     jadi lebih jelas dan terstruktur.
 
 6. Apakah ada feedback untuk asisten dosen tutorial 1 yang telah kamu kerjakan sebelumnya?
-    No interaction = no feedback, cuz it was online
+    No comment, cuz it was online
